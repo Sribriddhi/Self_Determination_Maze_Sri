@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>The Motivation Maze · Ryan & Deci (2000)</title><style>
+:root{font-family:Segoe UI,Arial,sans-serif;color:#302b46;background:#f8f4ff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 0% 0%,#ffdfec,transparent 42%),radial-gradient(circle at 100% 30%,#d6f5eb,transparent 45%),#f8f4ff;min-height:100vh}.shell{max-width:1120px;margin:auto;padding:22px}header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:28px}.brand{font-weight:900;letter-spacing:2px;color:#7951a8}.pill{border:1px solid #dfd5ed;border-radius:30px;padding:9px 14px;background:#ffffffa8;font-size:12px}.panel,.game,.side{background:#ffffffd9;border:1px solid #e7dff1;border-radius:25px;box-shadow:0 14px 42px #67518c12}.panel{padding:40px;max-width:800px;margin:24px auto}.intro{text-align:center;padding:65px 35px}.intro h1{font-size:clamp(38px,6vw,70px);line-height:1.07;margin:16px auto;max-width:720px}.intro h1 em{color:#a46bc4}.intro p{max-width:580px;margin:20px auto;line-height:1.7}.decor{font-size:42px;color:#b982bf;margin:25px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:800;color:#a068bd}button{border:0;border-radius:13px;padding:13px 22px;font-size:15px;font-weight:800;cursor:pointer;transition:transform .12s}button:hover{transform:translateY(-2px)}.primary{background:#8055b7;color:white;box-shadow:0 6px 15px #8055b733}.secondary{background:#eee7f7;color:#64418e}.tiny{font-size:12px;color:#887e9c}.hidden{display:none!important}.status{display:flex;justify-content:space-between;align-items:center;margin:20px 0}.status h2{margin:6px 0;font-size:28px}.stats{display:flex;gap:10px}.stats span{background:white;border-radius:20px;padding:12px;font-weight:800}.layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:18px}.game{padding:16px;text-align:center}canvas{width:100%;max-width:576px;aspect-ratio:4/3;background:#e6f5ed;border-radius:13px;image-rendering:pixelated}.side{padding:24px;display:flex;flex-direction:column;gap:18px}.condition{font-size:18px;font-weight:800;line-height:1.5}.condition small{font-size:14px;font-weight:400;display:block;margin-top:12px}.tip{background:#f5f0fc;padding:15px;border-radius:13px;font-size:14px;line-height:1.6}.controls{margin-top:12px}.controls button{margin:3px;padding:9px 20px;background:#e5d6f5;color:#5d3c85}.controls>button{display:block;margin:3px auto}#reflection label{display:block;margin:28px 0 8px;font-weight:700}input[type=range]{width:100%;accent-color:#8055b7}#saveReflection{margin-top:30px}.trophyAward{display:flex;align-items:center;gap:18px;padding:18px;margin:18px 0;border:2px solid #e7d6f3;border-radius:18px;background:linear-gradient(120deg,#fff9e7,#f3e9ff)}.trophyAward svg{width:75px;height:75px;flex:none;image-rendering:pixelated;filter:drop-shadow(0 4px 2px #4d375233)}.trophyAward strong{font-size:20px;color:#69438e}.trophyAward p{margin:5px 0;font-size:14px}.trophyAward small{color:#756981}.trophyAward.compact{margin:12px 0;padding:12px}.trophyAward.compact svg{width:54px;height:54px}.trophyAward.compact strong{font-size:16px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.resultCards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.resultCard{background:#f3edf9;border-radius:17px;padding:20px}.resultCard h3{margin:0 0 12px}.bar{height:12px;background:#e0d5ec;border-radius:9px;overflow:hidden;margin:8px 0 16px}.fill{height:100%;background:#a378c7}.insight,.research{padding:20px;background:#eff8f4;border-radius:16px;line-height:1.7;margin:18px 0}.research{background:#f7f2fc}.answerResult{background:#fff;border:1px solid #e4d8ee;border-radius:12px;padding:12px;margin:12px 0}.answerResult strong{display:block;font-size:13px;color:#7951a8;margin-bottom:6px}.answerResult span{font-weight:700}.resultCard .bar{margin-bottom:14px}footer{text-align:center;color:#9b8baa;font-size:12px;padding:30px}@media(max-width:760px){.layout{grid-template-columns:1fr}.panel{padding:24px}.resultCards{grid-template-columns:1fr}header{flex-wrap:wrap}.intro{padding:40px 20px}}
+.preferenceQuestion{padding:20px;background:#fff8ed;border:1px solid #efdfc8;border-radius:16px;margin:18px 0}.preferenceQuestion label{display:block;padding:12px;margin-top:9px;border-radius:12px;background:#fff;cursor:pointer}.preferenceQuestion input{accent-color:#8055b7;margin-right:9px}.preferenceQuestion .mcqBlock+ .mcqBlock{border-top:1px solid #eadbc9;margin-top:20px;padding-top:20px}.preferenceQuestion .mcqTitle{font-size:18px;line-height:1.45;margin:0 0 14px;font-weight:800}.preferenceQuestion .mcqOption{display:flex!important;align-items:center;gap:10px;padding:14px 16px!important;margin:10px 0!important;font-weight:700!important;background:white;border-radius:12px;cursor:pointer}.preferenceQuestion .mcqOption input{margin:0;flex:none}.preferenceQuestion .mcqOption:has(input:checked){outline:2px solid #a77bc7;background:#f9f2ff}.rulesOverlay{position:fixed;inset:0;z-index:50;background:#332747a8;display:flex;align-items:center;justify-content:center;padding:20px}.rulesDialog{background:#fffafc;border:3px solid #d9b9ee;border-radius:25px;max-width:470px;width:100%;padding:32px;box-shadow:0 20px 80px #33274755;text-align:center}.rulesDialog h2{color:#7951a8;margin:8px 0 14px}.rulesDialog p{line-height:1.7}.rulesDialog .rule{background:#f6efff;border-radius:13px;padding:12px;margin:10px 0}.rulesDialog button{margin-top:16px;min-width:170px}</style></head>
+<body><main class="shell">
+<header><div class="brand">✦ THE MOTIVATION MAZE</div><div class="pill">A tiny psychology adventure · Ryan & Deci (2000)</div></header>
+<section id="welcome" class="panel intro"><div class="eyebrow">A playable classroom experience</div><h1>What makes you <em>want</em> to keep going?</h1><p>Explore two colorful mazes, collect little stars, and discover how different motivational conditions feel. Your choices matter more than your score.</p><div class="decor">✿ &nbsp; ✦ &nbsp; ♡ &nbsp; ✧ &nbsp; ✿</div><button id="start" class="primary">Enter the maze →</button><p class="tiny">About 4–6 minutes · Works offline · Keyboard or touch</p><p class="tiny" style="max-width:530px;margin:12px auto 0"><strong>🔒 Privacy-friendly:</strong> This game runs entirely in your browser. No account, internet connection, camera, microphone, location, or personal data collection. Your answers stay on this device; downloading results is optional.</p></section>
+<section id="play" class="hidden"><div class="status"><div><span id="levelLabel" class="eyebrow"></span><h2 id="levelTitle"></h2></div><div class="stats"><span id="stars">✦ 0 / 0</span><span id="timer"></span></div></div>
+<div class="layout"><div class="game"><canvas id="board" width="576" height="432" aria-label="Maze game"></canvas><div class="controls"><button data-dir="up">↑</button><div><button data-dir="left">←</button><button data-dir="down">↓</button><button data-dir="right">→</button></div></div><p class="tiny"><span id="movementHelp">Use your keyboard arrow keys or the ON-SCREEN buttons. Collect every star, then reach the door.</span></p></div>
+<aside class="side"><div id="condition" class="condition"></div><div class="tip" id="tip"></div><button id="resetLevel" class="secondary">↻ Restart level</button></aside></div></section>
+<section id="reflection" class="panel hidden"><div class="eyebrow" id="reflectionLabel"></div><h2 id="reflectionTitle"></h2><div id="trophyReveal" class="hidden"></div><p>How did this level feel to you?</p><label for="enjoyment">How much did you enjoy it? <strong id="enjoymentValue">0 / 5</strong></label><input type="range" min="0" max="5" value="0" id="enjoyment"><label for="choice">How much freedom did you feel to think, move, and analyze the maze? <strong id="choiceValue">0 / 5</strong></label><input type="range" min="0" max="5" value="0" id="choice"><div class="preferenceQuestion" aria-label="Your preferences"><div id="restrictionQuestion" class="mcqBlock hidden" role="group" aria-labelledby="restrictionHeading"><h3 class="mcqTitle" id="restrictionHeading">In the second round, you could only use the on-screen arrow keys. Would you prefer to keep or remove this restriction?</h3><label class="mcqOption"><input type="radio" name="restrictionPreference" value="keep"> Keep the restriction</label><label class="mcqOption"><input type="radio" name="restrictionPreference" value="remove"> Remove the restriction</label><p id="restrictionError" class="tiny" aria-live="polite"></p></div><div class="mcqBlock" role="group" aria-labelledby="preferenceHeading"><h3 class="mcqTitle" id="preferenceHeading">If the maze gradually became more difficult, how would you prefer to continue playing?</h3><label class="mcqOption"><input type="radio" name="rewardPreference" value="with"> With rewards and punishments</label><label class="mcqOption"><input type="radio" name="rewardPreference" value="without"> Without rewards and punishments</label><p class="tiny">Choose one option. Your answer shows a preference, not a definitive motivation type.</p><p id="preferenceError" class="tiny" aria-live="polite"></p></div></div><button id="saveReflection" class="primary">Continue →</button></section>
+<section id="results" class="panel hidden"><div class="eyebrow">Your motivation report</div><div id="researchSection"><h2>What the paper actually says</h2><div class="research"><p><b>Autonomy & competence:</b> Cognitive Evaluation Theory describes conditions that support or undermine intrinsic motivation (paper pp. 70–71; PDF pp. 3–4).</p><p><b>Controlling conditions:</b> The authors discuss expected task-contingent tangible rewards, threats, deadlines, and pressured evaluation as potential underminers of intrinsic motivation (PDF p. 3).</p><p><b>Relatedness:</b> Feeling secure and connected can also support intrinsic motivation (PDF p. 4).</p><p><b>Important:</b> This game is an educational illustration, <em>not</em> a controlled experiment or scientific proof. Its two levels vary in several ways and a single player's feelings cannot establish causality.</p></div></div><h2>Your results</h2><p>What did you experience?</p><div id="resultCards" class="resultCards"></div><div id="comparisonResult" class="insight"></div><div id="freeResult" class="insight"></div><div id="researchLocation"></div><div class="actions"><button id="again" class="primary">Play again ↻</button><button id="export" class="secondary">Download my results (.txt)</button></div><p class="tiny">Source: Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. American Psychologist, 55(1), 68–78.</p></section>
+<div id="exploreOverlay" class="rulesOverlay hidden" role="dialog" aria-modal="true" aria-labelledby="exploreHeading"><div class="rulesDialog"><div class="eyebrow">Level 1 · Exploration Garden</div><h2 id="exploreHeading">Before you explore!</h2><p>This round is all about exploring at your own pace.</p><div class="rule"><strong>Move using your KEYBOARD arrow keys OR the ON-SCREEN arrow buttons ↑ ↓ ← →.</strong></div><div class="rule"><strong>There is NO countdown and NO time pressure.</strong><br>Take whichever route you like, and explore freely.</div><p>Collect all <strong>4 stars</strong> to unlock the exit, then guide your bunny to the door.</p><p>After finishing, you'll rate <strong>enjoyment</strong> and <strong>perceived freedom</strong> from 0 to 5.</p><button id="acceptExplore" class="primary">OK, Let's explore!</button></div></div><div id="rulesOverlay" class="rulesOverlay hidden" role="dialog" aria-modal="true" aria-labelledby="rulesHeading"><div class="rulesDialog"><div class="eyebrow">Level 2 · Performance Lab</div><h2 id="rulesHeading">Before you begin!</h2><p>You're now being evaluated on how quickly you finish the maze.</p><div class="rule"><strong>Use ONLY the ON-SCREEN arrow buttons ↑ ↓ ← →.</strong><br>Keyboard controls will not work.</div><div class="rule"><strong>You have a 60-second countdown!</strong><br>The timer starts only after you click OK. You can still finish if it reaches zero.</div><p>Collect all <strong>4 stars</strong>, then reach the exit to earn your trophy.</p><button id="acceptRules" class="primary">OK, Start the timer!</button></div></div><footer>Made for learning, curiosity & a little bit of fun ✿ · Offline &amp; no tracking</footer></main><script>
+(() => {
+"use strict";
+const $=id=>document.getElementById(id);
+const screens=["welcome","play","reflection","results"];
+function show(id){screens.forEach(s=>$(s).classList.toggle("hidden",s!==id));window.scrollTo(0,0)}
+const maps=[
+["############","#P....#....#","#.##..#.##.#","#..*..#....#","##.##...##.#","#...#.*....#","#.#...##.#.#","#...##...#E#","############"],
+["############","#P...#.....#","#.#..#.###.#","#.*..#.....#","###.##.###.#","#...*......#","#.##.##.##.#","#.........E#","############"],
+["############","#P....#....#","#.#.#...##.#","#...#*.....#","##.###.##..#","#....*.....#","#.##.##.##.#","#.........E#","############"]
+];
+const levels=[
+{title:"The Exploration Garden",label:"Level 1 · Explore",condition:"🌷 You're in charge.",details:"Take your time. Find the stars in whichever order you like. There is no countdown and no evaluation.",tip:"You can choose your own path. Experiment and enjoy exploring."},
+{title:"The Performance Lab",label:"Level 2 · Perform",condition:"⏱ Your performance is being evaluated!",details:"Use only the ON-SCREEN arrow buttons to move. Keyboard controls are disabled in this round. Finish as quickly as you can! The countdown is running, and your completion time will be displayed.",tip:"The timer is motivational framing, not a failure condition. You can still finish if it reaches zero."},
+{title:"The Secret Garden",label:"Bonus · Just for fun",condition:"✨ No points, no pressure.",details:"This is an optional bonus maze. Explore it simply because you want to.",tip:"Your decision to play this level was recorded as a free-choice response."}
+];
+let state={level:0,grid:[],player:{x:1,y:1},stars:0,total:0,started:0,elapsed:0,finished:false,ratings:[],optional:null,rewardPreference:null,awaitingRules:false};
+const canvas=$("board"),ctx=canvas.getContext("2d");
+const tile=48, ox=0,oy=0;
+function loadLevel(n){
+ state.level=n;state.grid=maps[n].map(r=>r.split(""));state.stars=0;state.total=0;state.finished=false;
+ // Remove fixed star positions, then scatter stars over reachable floor tiles.
+ state.grid.forEach((r,y)=>r.forEach((c,x)=>{
+   if(c==="P"){state.player={x,y};state.grid[y][x]=".";}
+   if(c==="*")state.grid[y][x]=".";
+ }));
+ // Flood fill ensures every randomly placed star can actually be collected.
+ const queue=[[state.player.x,state.player.y]],seen=new Set([`${state.player.x},${state.player.y}`]),available=[];
+ for(let i=0;i<queue.length;i++){
+   const [x,y]=queue[i];
+   if(state.grid[y][x]==="." && !(x===state.player.x&&y===state.player.y))available.push([x,y]);
+   for(const [dx,dy] of [[0,1],[0,-1],[1,0],[-1,0]]){
+     const nx=x+dx,ny=y+dy,k=`${nx},${ny}`;
+     if(ny<0||ny>=state.grid.length||nx<0||nx>=state.grid[ny].length||seen.has(k)||state.grid[ny][nx]==="#")continue;
+     seen.add(k);queue.push([nx,ny]);
+   }
+ }
+ // Fisher–Yates shuffle: a fresh arrangement every time a level loads.
+ for(let i=available.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[available[i],available[j]]=[available[j],available[i]];}
+ const count=4; // Four randomly placed, reachable stars in both main rounds.
+ state.total=Math.min(count,available.length);
+ for(let i=0;i<state.total;i++){const [x,y]=available[i];state.grid[y][x]="*";}
+ state.started=0;state.elapsed=0;state.awaitingRules=n===0||n===1;
+ $("movementHelp").textContent=n===1?"Performance round: use ONLY the ON-SCREEN arrow buttons. Keyboard movement is disabled. Collect all four stars to unlock the exit.":"Exploration round: use your keyboard arrow keys or the ON-SCREEN buttons. Collect all four stars to unlock the exit.";
+ $("levelLabel").textContent=levels[n].label;$("levelTitle").textContent=levels[n].title;
+ $("condition").innerHTML=levels[n].condition+"<small>"+levels[n].details+"</small>";
+ $("tip").textContent=levels[n].tip;
+ $("timer").textContent=n===1?"⏱ 60s":"✿ Relax";
+ show("play");render();
+ $("rulesOverlay").classList.toggle("hidden",n!==1);
+ $("exploreOverlay").classList.toggle("hidden",n!==0);
+ if(n===1)$("acceptRules").focus();
+ if(n===0)$("acceptExplore").focus();
+}
+function roundedRect(x,y,w,h,r,color){ctx.fillStyle=color;ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill()}
+// Transparent, hand-drawn pixel sprites; each pixel is enlarged 2x on the canvas.
+const iconPalette={K:"#47354f",Y:"#ffe17d",O:"#ffb547",W:"#fffaf2",P:"#d78eb5",R:"#a95d8f",B:"#7c5aab",D:"#65487d",G:"#a5e2bf",S:"#f6d6e7"};
+const iconSprites={
+ star:[
+ ".......YY.......",
+ ".......YY.......",
+ "......YYYY......",
+ "......YYYY......",
+ "KKKKKKYYYYKKKKKK",
+ ".KOOOOYYYYOOOOK.",
+ "..KOOOOYYOOOOK..",
+ "...KOOOYYOOOK...",
+ "....KOOOOOOK....",
+ "....KOOOOOOK....",
+ "...KOOOKKOOOK...",
+ "...KOOK..KOOK...",
+ "..KOOK....KOOK..",
+ "..KKK......KKK..",
+ "................",
+ "................"],
+ lock:[
+ ".....KKKKKK.....",
+ "....KWWWWWWK....",
+ "...KWWK..KWWK...",
+ "...KWK....KWK...",
+ "...KWK....KWK...",
+ "...KWK....KWK...",
+ "...KWKKKKKKWK...",
+ "..KKKKKKKKKKKK..",
+ "..KBBBBBBBBBBK..",
+ "..KBBBWKKWBBBK..",
+ "..KBBBWKKWBBBK..",
+ "..KBBBBKKBBBBK..",
+ "..KBBBBKKBBBBK..",
+ "..KBBBBBBBBBBK..",
+ "..KKKKKKKKKKKK..",
+ "................"],
+ door:[
+ "...KKKKKKKKKK...",
+ "..KPPPPPPPPPPK..",
+ ".KPPPPPPPPPPPPK.",
+ ".KPKKKKKKKKKKPK.",
+ ".KPKDDDDDDDDKPK.",
+ ".KPKDDDDDDDDKPK.",
+ ".KPKDDDDDDDDKPK.",
+ ".KPKDDDDDDDDKPK.",
+ ".KPKDDDDDDDDKPK.",
+ ".KPKDDDDDDDDKPK.",
+ ".KPKDDDDDDWKKPK.",
+ ".KPKDDDDDDWKKPK.",
+ ".KPKDDDDDDDDKPK.",
+ ".KPKDDDDDDDDKPK.",
+ ".KKKKKKKKKKKKKK.",
+ "................"]
+};
+function drawIcon(name,x,y){
+ const sprite=iconSprites[name],scale=2;
+ const left=x+8,top=y+8;
+ for(let row=0;row<16;row++)for(let col=0;col<16;col++){
+   const code=sprite[row][col];
+   if(code!=="."){ctx.fillStyle=iconPalette[code];ctx.fillRect(left+col*scale,top+row*scale,scale,scale)}
+ }
+}
+function render(){
+ ctx.clearRect(0,0,576,432);
+ const colors=["#e5f6ec","#f8e9ef","#e6effa"];ctx.fillStyle=colors[state.level];ctx.fillRect(0,0,576,432);
+ for(let y=0;y<9;y++)for(let x=0;x<12;x++){
+ const c=state.grid[y][x],px=x*tile,py=y*tile;
+ if(c==="#"){roundedRect(px+2,py+2,44,44,9,state.level===1?"#a77ba5":"#8db8a6");roundedRect(px+7,py+5,34,10,5,"#ffffff33");}
+ else{roundedRect(px+3,py+3,42,42,7,(x+y)%2?"#ffffff55":"#ffffff22");
+ if(c==="*"){drawIcon("star",px,py)}
+ if(c==="E"){drawIcon(state.stars===state.total?"door":"lock",px,py)}
+ }}
+ const p=state.player;
+ // Custom 24×24 pixel-art bunny sprite, drawn at 2× scale with transparent pixels.
+ // No circle, halo, or background is drawn behind the character.
+ const palette={A:"#47354f",B:"#fffaf2",C:"#f49ebc",D:"#ffffff",E:"#30243b",F:"#f7c6d3",G:"#ef7e9c"};
+ const sprite=[
+  "....AAAAAA....AAAAAA....",
+  "....ABBBBA....ABBBBA....",
+  "....ABCCBA....ABCCBA....",
+  "....ABCCBA....ABCCBA....",
+  "....ABCCBA....ABCCBA....",
+  "....ABCCBA....ABCCBA....",
+  "....ABCCBA....ABCCBA....",
+  "....ABCCAAAAAAAACCBA....",
+  "....AAAABBBBBBBBAAAA....",
+  "....AABBBBBBBBBBBBAA....",
+  "...ABBBBBBBBBBBBBBBBA...",
+  "..ABBBBBBBBBBBBBBBBBBA..",
+  ".ABBBBBDEBBBBBBDEBBBBBA.",
+  ".ABBBBBEEBBBBBBEEBBBBBA.",
+  ".ABFFFBEEBBBBBBEEBFFFBA.",
+  ".ABFFFBBBBBGGBBBBBFFFBA.",
+  "..ABBBBBBBBGGBBBBBBBBA..",
+  "...ABBBBBBEBBEBBBBBBA...",
+  "....AABBBBBBBBBBBBAA....",
+  "....AAAABBBBBBBBAAAA....",
+  "...ABBBBAAAAAAAABBBBA...",
+  "...ABBBBABBBBBBABBBBA...",
+  "...ABBBBABBBBBBABBBBA...",
+  "...AAAAAAAAAAAAAAAAAA..."
+ ];
+ for(let sy=0;sy<24;sy++)for(let sx=0;sx<24;sx++){
+   const code=sprite[sy][sx];
+   if(code!=="."){ctx.fillStyle=palette[code];ctx.fillRect(p.x*tile+sx*2,p.y*tile+sy*2,2,2);}
+ }
+ $("stars").textContent=`✦ ${state.stars} / ${state.total}`;
+}
+function move(dx,dy){
+ if(state.awaitingRules)return;
+ if($("play").classList.contains("hidden")||state.finished)return;
+ const nx=state.player.x+dx,ny=state.player.y+dy;
+ if(ny<0||ny>=9||nx<0||nx>=12)return;
+ const c=state.grid[ny][nx];if(c==="#")return;
+ if(c==="E"&&state.stars!==state.total){$("tip").textContent="Collect every star before opening the door! ✨";return}
+ state.player={x:nx,y:ny};
+ if(c==="*"){state.stars++;state.grid[ny][nx]="."}
+ render();
+ if(c==="E"){state.finished=true;state.elapsed=Math.round((Date.now()-state.started)/1000);setTimeout(finish,350)}
+}
+function trophyFor(seconds){
+ if(seconds<=15)return {name:"Gold Trophy",color:"#e5af37",shine:"#fff1a1",description:"Lightning fast! You finished in 15 seconds or less."};
+ if(seconds<=30)return {name:"Silver Trophy",color:"#aeb9cb",shine:"#f5f7ff",description:"Great job! You finished in 30 seconds or less."};
+ return {name:"Bronze Trophy",color:"#bf8054",shine:"#f8d3a8",description:"Maze conquered! You collected every star and reached the exit."};
+}
+function trophyMarkup(seconds,compact=false){
+ const t=trophyFor(seconds);
+ return `<div class="trophyAward ${compact?"compact":""}">
+ <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${t.name}" shape-rendering="crispEdges">
+ <path fill="#463753" d="M17 12h46v7H17zM13 19h8v22h-8zM59 19h8v22h-8zM19 41h12v7H19zM49 41h12v7H49zM32 46h16v11H32zM27 57h26v7H27zM21 64h38v8H21z"/>
+ <path fill="${t.color}" d="M22 16h36v23H22zM17 23h5v14h-5zM58 23h5v14h-5zM30 39h20v8H30zM35 47h10v13H35zM25 65h30v3H25z"/>
+ <path fill="${t.shine}" d="M27 20h7v18h-7zM35 20h13v5H35zM30 43h8v3h-8z"/>
+ <path fill="#fff6ce" d="M39 26h3v4h4v3h-4v4h-3v-4h-4v-3h4z"/>
+ </svg><div><strong>${t.name}!</strong><p>${t.description}</p><small>Performance time: ${seconds} seconds · 4 stars collected</small></div></div>`;
+}
+function finish(){
+ const trophy=$("trophyReveal");
+ trophy.classList.toggle("hidden",state.level!==1);
+ trophy.innerHTML=state.level===1?trophyMarkup(state.elapsed):"";
+ $("reflectionLabel").textContent=levels[state.level].label+" complete";
+ $("reflectionTitle").textContent=state.level===0?"How did exploring feel?":"How did performing under pressure feel?";
+ ["enjoyment","choice"].forEach(id=>{$(id).value=0;$(id+"Value").textContent="0 / 5"});
+ document.querySelectorAll('input[name="restrictionPreference"]').forEach(el=>el.checked=false);
+ $("restrictionError").textContent="";
+ $("restrictionQuestion").classList.toggle("hidden",state.level!==1);
+ document.querySelectorAll('input[name="rewardPreference"]').forEach(el=>el.checked=false);
+ $("preferenceError").textContent="";
+ show("reflection");
+}
+$("acceptExplore").onclick=()=>{state.awaitingRules=false;state.started=Date.now();$("exploreOverlay").classList.add("hidden");};
+$("acceptRules").onclick=()=>{state.awaitingRules=false;state.started=Date.now();$("rulesOverlay").classList.add("hidden");$("timer").textContent="⏱ 60s";};
+document.addEventListener("keydown",e=>{
+ const d={ArrowUp:[0,-1],ArrowDown:[0,1],ArrowLeft:[-1,0],ArrowRight:[1,0],}[e.key];
+ if(d){if(!$("play").classList.contains("hidden")){e.preventDefault();if(state.level===1)return;}move(...d)}
+});
+document.querySelectorAll("[data-dir]").forEach(b=>b.addEventListener("click",()=>{const d={up:[0,-1],down:[0,1],left:[-1,0],right:[1,0]};move(...d[b.dataset.dir])}));
+$("start").onclick=()=>{state.ratings=[];state.rewardPreference=null;document.querySelectorAll('input[name="rewardPreference"]').forEach(el=>el.checked=false);loadLevel(0)};
+$("resetLevel").onclick=()=>loadLevel(state.level);
+["enjoyment","choice"].forEach(id=>$(id).addEventListener("input",()=>$(id+"Value").textContent=$(id).value+" / 5"));
+$("saveReflection").onclick=()=>{
+ const selected=document.querySelector('input[name="rewardPreference"]:checked');
+ const restrictionSelected=document.querySelector('input[name="restrictionPreference"]:checked');
+ if(state.level===1&&!restrictionSelected){$("restrictionError").textContent="Please choose whether to keep or remove the restriction.";return;}
+ if(!selected){$("preferenceError").textContent="Please select one option to continue.";return;}
+ state.ratings.push({level:state.level,enjoyment:+$("enjoyment").value,choice:+$("choice").value,seconds:state.elapsed,restrictionPreference:state.level===1?restrictionSelected.value:null,rewardPreference:selected.value});
+ if(state.level===0)loadLevel(1);else showResults();
+};
+document.querySelectorAll('input[name="rewardPreference"]').forEach(el=>el.addEventListener("change",()=>{$("preferenceError").textContent="";}));
+document.querySelectorAll('input[name="restrictionPreference"]').forEach(el=>el.addEventListener("change",()=>{$("restrictionError").textContent="";}));
+function showResults(){
+ const labels=["Exploration Garden","Performance Lab"];
+ const rewardText=v=>v==="with"?"With rewards and punishments":v==="without"?"Without rewards and punishments":"Not answered";
+ const restrictionText=v=>v==="keep"?"Keep the on-screen arrow-key restriction":v==="remove"?"Remove the on-screen arrow-key restriction":"Not answered";
+ $("resultCards").innerHTML=state.ratings.map((r,i)=>`<div class="resultCard"><h3>${labels[i]}</h3>
+ <p><strong>Enjoyment:</strong> ${r.enjoyment}/5</p><div class="bar"><div class="fill" style="width:${r.enjoyment*20}%"></div></div>
+ <p><strong>Freedom to think, move, and analyze:</strong> ${r.choice}/5</p><div class="bar"><div class="fill" style="width:${r.choice*20}%"></div></div>
+ <div class="answerResult"><strong>Preference if the maze gradually becomes harder</strong><span>${rewardText(r.rewardPreference)}</span></div>
+ ${i===1?`<div class="answerResult"><strong>On-screen arrow-key restriction</strong><span>${restrictionText(r.restrictionPreference)}</span></div>`:""}
+ <p class="tiny">Completion time: ${r.seconds} seconds</p>${i===1?trophyMarkup(r.seconds,true):""}</div>`).join("");
+ const [a,b]=state.ratings;
+ if(a&&b){
+  const diff=(v)=>v>0?`increased by ${v}`:v<0?`decreased by ${-v}`:"stayed the same";
+  $("comparisonResult").innerHTML=`<h3>Comparing your two rounds</h3><p><strong>Enjoyment:</strong> ${a.enjoyment}/5 → ${b.enjoyment}/5 (${diff(b.enjoyment-a.enjoyment)}).</p><p><strong>Freedom to think, move, and analyze:</strong> ${a.choice}/5 → ${b.choice}/5 (${diff(b.choice-a.choice)}).</p><p><strong>Rewards/punishments preference:</strong> Round 1 — ${rewardText(a.rewardPreference)}; Round 2 — ${rewardText(b.rewardPreference)}.</p><p><strong>Round 2 arrow-key restriction:</strong> ${restrictionText(b.restrictionPreference)}.</p>`;
+ }
+ $("freeResult").textContent="These answers describe your experience, not a diagnosis of your motivation. The second level includes a countdown and limits controls to on-screen buttons, so the differences cannot establish what caused a change in enjoyment or freedom.";
+ $("researchLocation").appendChild($("researchSection"));
+ show("results");
+}
+
+$("again").onclick=()=>{state.ratings=[];state.rewardPreference=null;document.querySelectorAll('input[name="rewardPreference"]').forEach(el=>el.checked=false);loadLevel(0)};
+$("export").onclick=()=>{
+ const txt=["THE MOTIVATION MAZE — MY RESULTS","Ryan & Deci (2000) classroom illustration","",...state.ratings.map((r,i)=>`${levels[i].title}: enjoyment ${r.enjoyment}/5, perceived choice ${r.choice}/5, time ${r.seconds}s${r.restrictionPreference===null?"":`, on-screen-only arrow controls: ${r.restrictionPreference}`}, preference for harder mazes: ${r.rewardPreference==="with"?"With rewards and punishments":"Without rewards and punishments"}`),"","These results are not scientific proof of SDT."].join("\n");
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([txt],{type:"text/plain"}));a.download="motivation-maze-results.txt";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+};
+setInterval(()=>{if(!$("play").classList.contains("hidden")&&state.level===1&&!state.finished&&!state.awaitingRules){const left=Math.max(0,60-Math.floor((Date.now()-state.started)/1000));$("timer").textContent=`⏱ ${left}s${left===0?" · Keep going!":""}`}},250);
+})();
+
+</script></body></html>
